@@ -6,7 +6,7 @@ package com.ognwan.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.ognwan.model.Reservation;
+import com.ognwan.model.Bus;
 
 /**
  * @author gerry
@@ -14,6 +14,6 @@ import com.ognwan.model.Reservation;
  * 
  */
 @Repository
-public interface ReservationRepo extends JpaRepository<Reservation, Long> {
-
+public interface BusRepo extends JpaRepository<Bus, Long> {
+	public Bus findBusByRoute(String route);
 }
